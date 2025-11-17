@@ -25,12 +25,17 @@ type ExampleReply struct {
 }
 
 // Add your RPC definitions here.
-type DummyArgs struct {
-	Placeholder1 int
+type CommArgs struct {
+	Instruction string
+	Id          int
 }
 
-type DummyReply struct {
-	Placeholder2 int
+type CommReply struct {
+	CommRun  string
+	Payload  string
+	Mapid    int
+	Reduceid int
+	NReduce  int
 }
 
 // Cook up a unique-ish UNIX-domain socket name
